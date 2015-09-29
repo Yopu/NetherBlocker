@@ -51,6 +51,7 @@ public class NetherBlocker {
 
             Set<UniqueIdentifier> uniqueIdentifierWhitelist = dimensionWhitelist.get(playerDimension);
             UniqueIdentifier placedBlockUniqueIdentifier = GameRegistry.findUniqueIdentifierFor(event.placedBlock);
+
             if (!uniqueIdentifierWhitelist.contains(placedBlockUniqueIdentifier)) {
                 event.setCanceled(true);
             }
@@ -58,7 +59,7 @@ public class NetherBlocker {
     }
 
     private Map<Integer, Set<UniqueIdentifier>> parseBlockWhitelist(String[] rawBlockWhitelist) {
-        HashMap<Integer, Set<UniqueIdentifier>> map = new HashMap<>();
+        HashMap<Integer, Set<UniqueIdentifier>> map = new HashMap<Integer, Set<UniqueIdentifier>>();
 
         for (String s : rawBlockWhitelist) {
             int i = s.indexOf(':');
@@ -66,7 +67,7 @@ public class NetherBlocker {
 
             Set<UniqueIdentifier> whitelist;
             if (!map.containsKey(dim)) {
-                whitelist = new HashSet<>();
+                whitelist = new HashSet<UniqueIdentifier>();
                 map.put(dim, whitelist);
             } else {
                 whitelist = map.get(dim);

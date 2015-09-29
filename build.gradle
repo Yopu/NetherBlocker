@@ -21,7 +21,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0"
+version = "1.7.10-1.0"
 group= "yopu.netherblocker"
 archivesBaseName = "netherblocker"
 

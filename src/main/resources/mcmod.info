@@ -3,7 +3,7 @@
   "modid": "netherblocker",
   "name": "Nether Blocker",
   "description": "A mod that simplifies whitelisting blocks in dimensions",
-  "version": "1.0",
+  "version": "1.7.10-1.0",
   "mcversion": "1.7.10",
   "url": "https://github.com/Yopu/NetherBlocker",
   "updateUrl": "",
